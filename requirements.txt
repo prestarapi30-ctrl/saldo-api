@@ -1,5 +1,6 @@
-Flask
-Werkzeug
-PyJWT
-requests
-python-telegram-bot
+Flask==3.0.0
+PyJWT==2.8.0
+Werkzeug==3.0.1
+requests==2.32.3
+python-telegram-bot==20.7
+python-dotenv==1.0.1
