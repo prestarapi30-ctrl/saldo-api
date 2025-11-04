@@ -5,7 +5,6 @@ import os
 app = Flask(__name__)
 API_SECRET = os.environ.get("API_SECRET", "1234")
 
-# Crear base local
 conn = sqlite3.connect("saldos.db", check_same_thread=False)
 cur = conn.cursor()
 cur.execute("""
@@ -49,4 +48,4 @@ def index():
     return "API de saldos activa ✅"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
